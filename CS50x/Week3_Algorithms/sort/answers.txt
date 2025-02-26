@@ -1,0 +1,12 @@
+sort1 uses: bubble sort
+
+How do you know?: fast in sorted list but low when its come to random and reversed list
+
+sort2 uses: merge sort
+
+How do you know?: low and constant time (time lower then sort 3 )
+
+sort3 uses: selection sort
+
+How do you know?: high and constant time (time higher then sort 2 )
+

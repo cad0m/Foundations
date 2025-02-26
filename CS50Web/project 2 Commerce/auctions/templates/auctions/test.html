@@ -1,0 +1,96 @@
+<div class="container py-5">  
+    <!-- listing row -->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card border-0 shadow-sm">
+                <img src="{listing.image_url}}" class="img-fluid rounded" alt="{{listing.title}}"> 
+            </div>
+        </div> 
+        <div class="col-md-6">  
+            <!-- item information -->
+            <div class="mb-4">
+                <h1 class="display-4">{{listing.title}}<h1>
+                <p class="class="fs-4 .text-secondary>{{listing.category}}</p>
+                <p class="lead">{{listing.description}}</p>
+                <p class="fs-3">current price: <strong>{{listing.current_bid}} DH</strong></p>
+                <p class="muted-text"> posted by <strong>{{listing.poster.username}}</strong> on {{listing.listing_date}}</p>
+            </div>
+            
+            <!-- watch list button -->
+            {% if user.is_authenticated %}
+            <div class="mb-4">
+                {% if watchlist_item %}
+                    <form action="{% url 'add_remove_watchlist' listing.id %} "method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="action" value="add_remove_watchlist">
+                        <button type="submit" class="btn btn-danger w-100"> remove from Watchlist</button>
+                    </form>
+                {% else %}
+                    <form action="{% url 'add_remove_watchlist' listing.id %}" method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="action" value="add_remove_watchlist">
+                        <button type="submit" class="btn btn-success w-100"> add to Watchlist</button>
+                    </form>
+                {%endif%}
+            </div>
+            {% endif%}
+        </div>
+    </div>
+
+    <!-- bid row -->
+    {% if user.is_authenticated %}
+    <div class="row">
+        {% if is_the_poster %}
+            {% if listing.status %}
+                <form action="{% url 'close_bid' listing.id%}" method="post">
+                {% csrf_token%}
+                <input type="hidden" name="action" value="close_bid">
+                <button type="submit" class="btn btn-warning w-100"> Close The Bid </button>
+            {% else %}
+                    <p class="alert alert-info">This listing has been closed.</p>
+            {% endif %}
+        {% else %}
+            {% if listing.status %}
+                <form action="{% url 'place_bid' listing.id %}" method="post">
+                    {% csrf_token %}
+                    <div class="input-group mb-3">
+                        {{ bid_form.bid_value|add_class:"form-control form-control-lg" }}
+                        <button type="submit" class="btn btn-success btn-lg">Place Bid</button>
+                    </div>
+                </form>
+            {% else %}
+                <p class="alert alert-warning">The auction is closed.</p>
+                {% if is_the_winner %}
+                    <p class="alert alert-success">You are the winner!</p>
+                {% else %}
+                    <p class="alert alert-danger">This listing has a winner.</p>
+                {% endif %}
+            {% endif %}
+        {% endif%}
+    </div>
+
+    <!-- comment row -->
+    <div class="row">
+        <div class="card border-0 shadow-sm p-4 rounded"> 
+            <h3 class="text-primary"> Comments </h3>
+            {% if user.is_authenticated %}
+                <form action="{% url 'add_comment' listing.id%}" method="post" class="mb-4">
+                    {% csrf_token %}
+                    <input type="hidden" name="action" value="add_comment">
+                    <input type="text" name="comment" class="form-control form-control-lg" placeholder="Add comment">
+                    <button class="btn btn-success btn-lg"> Add comment </button>
+                </form>
+            {% endif %}
+        </div> 
+        <div class="comments-list">
+            {% for comment in comments %}
+                <div class="card mb-3 border-0">
+                    <div class="card-body">
+                        <p class="fs-2 mb-1"> {{comment.comment}}</p>
+                        <small class="text-muted"> commented by {{comment.commentor.username}} in{{comment.comment_date}}</small>
+                    </div>
+                </div>
+            {% endfor%}
+        </div>
+    </div>
+</div>

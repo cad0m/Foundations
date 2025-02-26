@@ -1,0 +1,330 @@
+<html lang="fr"><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/content/location/location.js" id="eppiocemhmnlbhjplcgkofciiegomcon"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/extend-native-history-api.js"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js"></script><head>
+    <title>FSTM - E-rÃ©sultat</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+    
+  </head>
+  <body style="padding-top: 70px;">
+  
+  <!--
+  <nav class="navbar navbar-inverse">
+  -->
+  
+  <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #337ab7;">
+  
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" style="background-color: #000000;" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" style="color: #ffffff;" href="deust.php"><b><i>FSTM</i></b></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          
+          <li><a style="color: #ffffff;font-size:1.1em;" href="deust.php"><i>E-résultat : Session d'automne 2023/2024 : Tronc Commun (DEUST)</i></a></li>
+             
+          
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+    
+  <div class="container-fluid">
+  
+      
+  
+  <div class="row">
+  
+  
+  <!--
+     <div class="col-sm-2">
+     
+     <td><center><img class="img-responsive img-rounded" src="uh2c_logo.jpg" alt="Test2" width="160" height="120"></center></td>
+     </div>
+      -->
+      <div class="col-sm-12">
+          <div class="well" style="background-color:#d6e0f5;">
+          
+              <div class="panel panel-default">
+                  <div class="panel-heading" style="color: #ff0000;"><h3><b><center>Session d'automne 2023/2024 : Résultats Tronc Commun (DEUST)</center></b></h3></div>
+                      <div class="panel-body">
+                      
+                  <!--Panel Content-->
+                      
+                                          
+                      <form enctype="multipart/form-data" action="deust.php" method="post" class="form-horizontal" role="form">
+                      
+                      <!--<center><FONT color="red"><h2><b>Site en cours de maintenance</b></h2></FONT></center>	-->
+                      <center><img class="img-responsive img-rounded" src="fstm_logo.png" alt="Test2" width="320" height="250"></center>
+                      
+                      <center>
+                      <a href="../index.php" class="btn btn-primary btn-md" role="button">Accueil</a>
+                      <a href="modules.php" class="btn btn-primary btn-md" role="button">Résultats Modules</a>
+                      <a href="semestres.php" class="btn btn-primary btn-md" role="button">Résultats Semestres</a>
+                      <a href="deust.php" class="btn btn-success btn-md" role="button">Résultats Tronc Commun</a>
+                      <a href="tp.php" class="btn btn-primary btn-md" role="button">Notes TP</a>
+                      </center>
+                        <br>
+                      
+                      
+                      
+                      
+                          <center><font color="blue"><h5><b>Veuillez saisir votre CNE ou votre code Massar</b></h5></font></center>
+                      
+                          <div class="form-group">
+                              <label class="control-label col-sm-6" for="code">CNE/ou Code Massar</label>
+                              <div class="col-sm-2">
+                                  <input name="code" type="text" class="form-control" id="code" maxlength="10">
+                              </div>
+                              
+                          </div>
+                          
+                          <div class="form-group">    
+                              <label class="control-label col-sm-5" for="afficher"></label>						
+                              <div class="col-sm-4">
+                                  <button name="afficher" type="submit" class="btn btn-primary" id="afficher">Afficher mes résultats</button>
+                              </div>
+                          </div>
+                      
+                      
+                          
+                      <!--
+                      <center><FONT color="red"><h5><b>Diplôme à récupérer :</b></h5></FONT></center>
+                      -->
+                      
+                                      
+                        
+                      
+                      <!--
+                      <h5><b><center><FONT color="black">Pour toutes vos questions, veuillez nous envoyer un email à l'adresse fstm.ecandidature@gmail.com</FONT></center></b></h5>	
+                      -->
+                      
+                      
+                      
+                      <!--	
+                      <br>	
+                      <h6><b><center><FONT color="black"><i>Équipe E-candidature</i></FONT></center></b></h6>	
+                      -->	
+                      </form>
+                      
+  
+          <font color="blue"><h5><b>DEUST MIP</b></h5></font>
+          
+                  <div class="table-responsive">
+                  <table class="table table-striped table-bordered table-condensed">
+           
+                  <thead>
+                      <tr>
+                  
+                              <th bgcolor="#FFFF66"><center>CODE</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>Nom</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>Prenom</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>C111</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>L111</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>M111</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>M112</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>P111</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>P112</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>Moy S1</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>Dél S1</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>C122</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>I121</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>L122</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>M123</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>M124</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>P123</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>Moy S2</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>Dél S2</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>I132</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>I133</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>L133</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>M135</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>M136</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>P134</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>Moy S3</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>Dél S3</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>E141</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>I141</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>M147</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>M148</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>P145</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>P146</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>Moy S4</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>Dél S4</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>DEUST</center></th>
+                              
+                              <th bgcolor="#FFFF66"><center>Dél DEUST</center></th>
+                                      
+                      </tr>
+                  </thead>
+                  
+              <tbody>
+              <tr>
+                              <th><center>R137458240</center></th>
+                              
+                              <th><center>MOURSLI</center></th>
+                              
+                              <th><center>MOHAMMED</center></th>
+                              
+                              <th><center>10,50</center></th>
+                              
+                              <th><center>10,00</center></th>
+                              
+                              <th><center>8,00</center></th>
+                              
+                              <th><center>13,00</center></th>
+                              
+                              <th><center></center></th>
+                              
+                              <th><center>12,40</center></th>
+                              
+                              <th><center>8,98</center></th>
+                              
+                              <th><center>NV</center></th>
+                              
+                              <th><center>10,00</center></th>
+                              
+                              <th><center>13,00</center></th>
+                              
+                              <th><center>13,38</center></th>
+                              
+                              <th><center>14,00</center></th>
+                              
+                              <th><center>12,00</center></th>
+                              
+                              <th><center>8,80</center></th>
+                              
+                              <th><center>11,86</center></th>
+                              
+                              <th><center>V</center></th>
+                              
+                              <th><center>14,10</center></th>
+                              
+                              <th><center>13,00</center></th>
+                              
+                              <th><center>12,25</center></th>
+                              
+                              <th><center>16,00</center></th>
+                              
+                              <th><center>10,00</center></th>
+                              
+                              <th><center>10,15</center></th>
+                              
+                              <th><center>12,58</center></th>
+                              
+                              <th><center>V</center></th>
+                              
+                              <th><center>7,50</center></th>
+                              
+                              <th><center>8,70</center></th>
+                              
+                              <th><center>3,00</center></th>
+                              
+                              <th><center>6,20</center></th>
+                              
+                              <th><center>10,92</center></th>
+                              
+                              <th><center>4,52</center></th>
+                              
+                              <th><center>6,81</center></th>
+                              
+                              <th><center>NV</center></th>
+                              
+                              <th><center>10,06</center></th>
+                              
+                              <th><center>Ajourné</center></th>
+                              </tr>
+                  </tbody>
+                  </table>
+                  </div><font color="red"><h5><b>Remarque MIP : AC c'est à dire Acquis par Compensation</b></h5></font><center><font color="black"><h5>-----</h5></font></center><br>					
+                          
+              <br>
+                          
+                          <center><font color="red"><h5><b>Pour toute réclamation, veuillez contacter le service de la scolarité</b></h5></font></center>
+                          
+                          
+                  
+                      </div>
+                  <div class="panel-footer"></div>
+              </div>
+                  
+          </div>
+  
+      </div>
+      <!--
+      <div class="col-sm-2">
+     
+     <td><center><img class="img-responsive img-rounded" src="uh2c_logo.jpg" alt="Test2" width="160" height="120"></center></td>
+     </div>
+      -->
+  </div>
+    
+  </div>
+  
+  
+   <div class="jumbotron" style="background-color: #337ab7;">
+      
+      <!--<p><font style="color: #ffffff;"><center>© 2018 Faculté des Sciences et Techniques de Mohammedia</center></font></p>-->
+       
+    </div>
+  
+  
+  
+  <div id="volume-booster-visusalizer">
+                      <div class="sound">
+                          <div class="sound-icon"></div>
+                          <div class="sound-wave sound-wave_one"></div>
+                          <div class="sound-wave sound-wave_two"></div>
+                          <div class="sound-wave sound-wave_three"></div>
+                      </div>
+                      <div class="segments-box">
+                          <div data-range="1-20" class="segment"><span></span></div>
+                          <div data-range="21-40" class="segment"><span></span></div>
+                          <div data-range="41-60" class="segment"><span></span></div>
+                          <div data-range="61-80" class="segment"><span></span></div>
+                          <div data-range="81-100" class="segment"><span></span></div>
+                      </div>
+                  </div></body></html>

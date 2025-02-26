@@ -1,0 +1,26 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    {% if active %}
+        <h2><span class="badge text-bg-secondary">Active Listings</span></h2>
+    {% else %}
+        <h2><span class="badge text-bg-secondary">Closed Listings</span></h2>
+    {% endif %} 
+    <div class="row row-cols-1 row-cols-md-3 g-7">
+        {% for listing in Listings %}
+        <div class="col">
+            <div class="card border-secondary w-100 text-center mb-3" >
+                <img src="{{listing.image_url}}" class="card-img-top" alt="{{listing.title}}" style="object-fit: cover; height: 400px; width: 100%;">
+                <div class="card-body">
+                  <h5 class="card-title">{{listing.title}}</h5>
+                  <p class="card-text">{{listing.description}}</p>
+                  <p class="card-text"><b>current price: {{listing.current_bid}} DH</b></p>
+                  <a href="{% url 'listing' listing.id %}" class="btn btn-primary">Check it</a>
+                  <div class="card-footer"><small class="text-body-secondary">posted on {{listing.listing_date}} by <b>{{listing.poster.username}}</b></small></div> 
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+

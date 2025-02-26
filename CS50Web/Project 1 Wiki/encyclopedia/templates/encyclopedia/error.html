@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {% if ErrorType == 'notexist'%}
+        entry Not Fround
+    {% elif ErrorType == 'exist'%}
+        entry aleardy exist
+    {% endif %}
+{% endblock %}
+
+{% block body %} 
+    {% if ErrorType == 'notexist'%}
+        <h1> <b>"{{title}}"</b> page was not found] :( </h1>
+    {% elif ErrorType == 'exist'%}
+        <h1> <b>"{{title}}"</b> aleady exist :) check the list here  <a href="{% url 'index'%}"> here</a></h1>
+    {% endif %}
+{% endblock%}

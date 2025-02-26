@@ -1,0 +1,6 @@
+csv_name <- readline("whats the city name (csv file name):")
+pitstops <- read.csv(csv_name)
+print(nrow(pitstops))
+print(min(pitstops$time))
+print(max(pitstops$time))
+print(sum(pitstops$time))

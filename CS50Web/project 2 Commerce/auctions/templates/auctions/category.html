@@ -1,0 +1,25 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2><span class="badge text-bg-secondary">Active Listings For {{name}} category</span></h2>
+    <div class="row row-cols-1 row-cols-md-2 g-7">
+        {% for listing in listings %}
+        <div class="col">
+            <div class="card border-secondary w-100 text-center mb-3">
+                <img src="{{listing.image_url}}" class="card-img-top" alt="{{listing.title}}" style="object-fit: cover; height: 400px; width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title">{{listing.title}}</h5>
+                    <p class="card-text">{{listing.description}}</p>
+                    <p class="card-text"><b>Current Price: {{listing.current_bid}} DH</b></p>
+                    <a href="{% url 'listing' listing.id %}" class="btn btn-primary">Check it</a>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">Posted on {{listing.listing_date}} by <b>{{listing.poster.username}}</b></small>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+            <p class="text-center">There are no items in this category yet.</p>
+        {% endfor %}
+    </div>
+{% endblock %}

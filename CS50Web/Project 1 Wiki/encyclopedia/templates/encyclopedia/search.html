@@ -1,0 +1,22 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    search
+{% endblock %}
+
+{% block body %}
+    <h1>search results for <b> "{{userinput}}"</b></h1>
+
+    <ul>
+        {% if empty %}
+            <li> <b> no results</b> </li>
+        {% else %}
+            {% for name in maybe %}
+                <li>
+                    <a href="{%url 'entry' name %}"> {{ name }}</a>
+                </li>
+            {% endfor %}
+        {% endif %}
+    </ul>
+
+{% endblock %}

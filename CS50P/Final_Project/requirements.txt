@@ -1,0 +1,9 @@
+# List of libraries required for the project
+
+selenium
+tabula
+pyfiglet
+beautifulsoup4
+re
+pandas
+sqlite3

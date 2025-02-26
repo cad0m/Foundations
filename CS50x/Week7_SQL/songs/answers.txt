@@ -1,0 +1,4 @@
+1. i will calculate the average of each one energy, valence, and danceability
+then i will compare between them wich is the high to characterize their audio aura.
+2.yes it could be not good to decide from 100 songs because this is a high range to decide what the actual user lisen to
+for me i will take top 5 or 10 and do the same .

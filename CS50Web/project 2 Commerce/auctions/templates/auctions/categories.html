@@ -1,0 +1,117 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>Categories</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card text-bg-dark mb-3 shadow-lg">
+                <img src="https://img.freepik.com/free-vector/flat-design-picasso-style-illustration_23-2149533904.jpg" class="card-img" alt="Art">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title text-center">
+                        <a href="{% url 'category' 'Art' %}" class="btn btn-primary px-4 py-2" style="background-color: rgba(0, 0, 0, 0.7); border:none;">Art</a>
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-bg-dark mb-3 shadow-lg">
+                <img src="https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg" class="card-img" alt="Books">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title text-center">
+                        <a href="{% url 'category' 'Books' %}" class="btn btn-primary px-4 py-2" style="background-color: rgba(0, 0, 0, 0.7); border:none;">Books</a>
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-bg-dark mb-3 shadow-lg">
+                <img src="https://png.pngtree.com/png-vector/20240719/ourlarge/pngtree-set-of-color-flat-icons-for-various-items-vector-png-image_7231639.png" class="card-img" alt="Collectibles">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title text-center">
+                        <a href="{% url 'category' 'Collectibles' %}" class="btn btn-primary px-4 py-2" style="background-color: rgba(0, 0, 0, 0.7); border:none;">Collectibles</a>
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-bg-dark mb-3 shadow-lg">
+                <img src="https://static.vecteezy.com/system/resources/previews/002/383/051/non_2x/set-of-flat-design-gadget-and-electronic-device-for-business-vector.jpg" class="card-img" alt="Electronics">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title text-center">
+                        <a href="{% url 'category' 'Electronics' %}" class="btn btn-primary px-4 py-2" style="background-color: rgba(0, 0, 0, 0.7); border:none;">Electronics</a>
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-bg-dark mb-3 shadow-lg">
+                <img src="https://st3.depositphotos.com/7595566/13226/i/450/depositphotos_132266560-stock-photo-trendy-feminine-accessories.jpg" class="card-img" alt="Fashion">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title text-center">
+                        <a href="{% url 'category' 'Fashion' %}" class="btn btn-primary px-4 py-2" style="background-color: rgba(0, 0, 0, 0.7); border:none;">Fashion</a>
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-bg-dark mb-3 shadow-lg">
+                <img src="https://img.freepik.com/free-vector/modern-home-interior-with-flat-design_23-2147912243.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1723420800&semt=ais_hybrid" class="card-img" alt="Home">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title text-center">
+                        <a href="{% url 'category' 'Home' %}" class="btn btn-primary px-4 py-2" style="background-color: rgba(0, 0, 0, 0.7); border:none;">Home</a>
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-bg-dark mb-3 shadow-lg">
+                <img src="https://cdn-icons-png.flaticon.com/512/4163/4163684.png" class="card-img" alt="Sports">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title text-center">
+                        <a href="{% url 'category' 'Sports' %}" class="btn btn-primary px-4 py-2" style="background-color: rgba(0, 0, 0, 0.7); border:none;">Sports</a>
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-bg-dark mb-3 shadow-lg">
+                <img src="https://img.freepik.com/free-vector/flat-design-christmas-toy-collection_23-2148359363.jpg" class="card-img" alt="Toys">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title text-center">
+                        <a href="{% url 'category' 'Toys' %}" class="btn btn-primary px-4 py-2" style="background-color: rgba(0, 0, 0, 0.7); border:none;">Toys</a>
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-bg-dark mb-3 shadow-lg">
+                <img src="https://cdn-icons-png.flaticon.com/512/214/214280.png" class="card-img" alt="Vehicles">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title text-center">
+                        <a href="{% url 'category' 'Vehicles' %}" class="btn btn-primary px-4 py-2" style="background-color: rgba(0, 0, 0, 0.7); border:none;">Vehicles</a>
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-bg-dark mb-3 shadow-lg">
+                <img src="https://i.pinimg.com/originals/fd/bd/76/fdbd7658a567dac5de5ad30fb2808b3e.jpg" class="card-img" alt="Food">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title text-center">
+                        <a href="{% url 'category' 'Food' %}" class="btn btn-primary px-4 py-2" style="background-color: rgba(0, 0, 0, 0.7); border:none;">Food</a>
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-bg-dark mb-3 shadow-lg">
+                <img src="https://cdn-icons-png.freepik.com/512/8776/8776775.png" class="card-img" alt="Other">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title text-center">
+                        <a href="{% url 'category' 'Other' %}" class="btn btn-primary px-4 py-2" style="background-color: rgba(0, 0, 0, 0.7); border:none;">Other</a>
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

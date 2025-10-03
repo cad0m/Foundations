@@ -1,5 +1,5 @@
 CREATE VIEW "available" AS
-SELECT "listings"."id", "property_type", "host_name", "date"
-FROM "listings"
-JOIN "availabilities" ON "availabilities"."listing_id" = "listings"."id"
-WHERE "available" = 'TRUE';
+SELECT l."id", l."property_type", l."host_name", a."date"
+FROM "listings" l
+JOIN "availabilities" a ON a."listing_id" = l."id"
+WHERE a."available" = 'TRUE';

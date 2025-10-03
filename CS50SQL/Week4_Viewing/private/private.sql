@@ -1,30 +1,21 @@
-CREATE TABLE "codes" (
-    "id" INTEGER,
-    "sentence_number" INTEGER,
-    "character_number" INTEGER,
-    "lenght" INTEGER,
-    PRIMARY KEY("id")
+CREATE TABLE "codes"(
+    "sentence_row" INTEGER,
+    "start_position" INTEGER,
+    "lenght" INTEGER
 );
 
-INSERT INTO "codes" ("sentence_number", "character_number", "lenght")
+INSERT INTO "codes"("sentence_row", "start_position", "lenght")
 VALUES
-('14','98','4'),
-('114','3','5'),
-('618','72','9'),
-('630','7','3'),
-('932','12','5'),
-('2230','50','7'),
-('2346','44','10'),
-('3041','14','5');
-
-CREATE VIEW "decoding" AS
-SELECT "sentence" AS "first_arg", "character_number" AS "second_arg", "lenght" AS "third_arg"
-FROM "codes"
-JOIN "sentences" ON "sentences"."id" = "codes"."sentence_number"
-;
+(14,98,4),
+(114,3,5),
+(618,72,9),
+(630,7,3),
+(932,12,5),
+(2230,50,7),
+(2346,44,10),
+(3041,14,5);
 
 CREATE VIEW "message" AS
-SELECT substr("first_arg", "second_arg", "third_arg") as "phrase"
-FROM "decoding";
+SELECT substr("sentences"."sentence", "codes"."start_position", "codes"."lenght") AS "phrase" FROM "sentences"
+JOIN "codes" ON "sentences"."id" = "codes"."sentence_row";
 
-SELECT "phrase" FROM "message";
